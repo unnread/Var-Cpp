@@ -127,9 +127,10 @@ Lorsqu'un objet `Var` est affiché avec `std::cout`, la bibliothèque détecte a
 
 regarder la documentation disponible dans ce repo 
 
-C++ 17 minimum 
+- C++ 17 minimum
+
 ---
 
 ## FIN
 
-** Merci énormement, ce projet est openSource, Vous pouvez l'ameliorer changer modifier **
+**Merci énormement, ce projet est openSource, Vous pouvez l'ameliorer changer modifier**
