@@ -33,7 +33,7 @@ Elle évite d'avoir à écrire plusieurs variables (`int`, `float`, `double`, `s
 Clonez le dépôt :
 
 ```bash
-git clone https://github.com/VOTRE-NOM/Var.git
+git clone https://github.com/unnread/Var.git
 ```
 
 Puis incluez le fichier :
