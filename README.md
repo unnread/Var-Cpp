@@ -122,7 +122,3 @@ Lorsqu'un objet `Var` est affiché avec `std::cout`, la bibliothèque détecte a
 - MSVC
 
 ---
-
-## Auteur
-
-Développé par **Youness Telmoune**.
