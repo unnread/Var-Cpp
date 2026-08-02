@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Var - Guide</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<div class="title">
+    Var
+</div>
+
+
+<ul>
+
+<li>
+<a href="index.html">Accueil</a>
+</li>
+
+<li>
+<a class="active" href="guide.html">Guide</a>
+</li>
+
+<li>
+<a href="api.html">API</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<main>
+
+
+<section class="container">
+
+
+<h1>
+Guide de démarrage
+</h1>
+
+
+<div class="card">
+
+<p>
+
+Ce guide explique comment installer et utiliser la bibliothèque
+<strong>Var</strong> dans un projet C++.
+
+</p>
+
+</div>
+
+
+
+<h2>
+Installation
+</h2>
+
+
+<div class="card">
+
+<p>
+Ajoutez simplement le fichier :
+</p>
+
+
+<div class="code">
+
+<pre>
+Var.hpp
+</pre>
+
+</div>
+
+
+<p>
+Puis incluez-le dans votre programme :
+</p>
+
+
+<div class="code">
+
+<pre>
+#include "Var.hpp"
+</pre>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<h2>
+Configuration du compilateur
+</h2>
+
+
+<div class="card">
+
+<p>
+Var utilise les fonctionnalités du C++17.
+Vous devez donc compiler avec C++17 ou une version supérieure.
+</p>
+
+
+<div class="code">
+
+<pre>
+g++ main.cpp -std=c++17 -o programme
+</pre>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<h2>
+Premier programme
+</h2>
+
+
+<div class="code">
+
+<pre>
+#include &lt;iostream&gt;
+#include "Var.hpp"
+
+
+int main()
+{
+
+    Var age = 10;
+
+    Var nom = "Youness";
+
+
+    std::cout &lt;&lt; nom &lt;&lt; std::endl;
+
+    std::cout &lt;&lt; age &lt;&lt; std::endl;
+
+
+    return 0;
+
+}
+</pre>
+
+</div>
+
+
+
+
+
+<h2>
+Plusieurs types
+</h2>
+
+
+<div class="card">
+
+
+<p>
+Une variable Var peut contenir différents types :
+</p>
+
+
+<div class="code">
+
+<pre>
+
+Var a = 100;
+
+Var b = 5.5;
+
+Var c = "Hello";
+
+Var d = true;
+
+</pre>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<h2>
+Afficher une valeur
+</h2>
+
+
+<div class="card">
+
+<p>
+L'opérateur <code>&lt;&lt;</code> permet d'afficher automatiquement
+la valeur contenue dans Var.
+</p>
+
+
+<div class="code">
+
+<pre>
+
+std::cout &lt;&lt; variable;
+
+</pre>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<h2>
+Conseils
+</h2>
+
+
+<div class="card">
+
+
+<ul>
+
+<li>
+Utilisez C++17 minimum.
+</li>
+
+<li>
+Gardez Var.hpp dans votre projet.
+</li>
+
+<li>
+Utilisez Var quand le type de donnée peut changer.
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+<div class="navigation">
+
+
+<a href="index.html" class="button">
+← Accueil
+</a>
+
+
+<a href="api.html" class="button">
+API →
+</a>
+
+
+</div>
+
+
+
+</section>
+
+
+</main>
+
+
+
+
+<footer>
+
+<p>
+Var Documentation - Guide
+</p>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

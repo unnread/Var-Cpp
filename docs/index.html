@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Var - Documentation C++</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="title">
+            Var
+        </div>
+
+        <ul>
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="guide.html">Guide</a></li>
+            <li><a href="api.html">API</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+<section class="hero">
+
+    <h1>
+        Var
+    </h1>
+
+    <p>
+        Une bibliothèque C++ moderne permettant de stocker plusieurs types
+        de données dans une seule variable.
+    </p>
+
+
+    <div class="buttons">
+
+        <a href="guide.html" class="button">
+            Commencer
+        </a>
+
+        <a href="api.html" class="button secondary">
+            Documentation API
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section class="container">
+
+
+<h2>
+    Introduction
+</h2>
+
+
+<div class="card">
+
+<p>
+
+Var est une classe C++ basée sur <code>std::variant</code>.
+Elle permet de manipuler plusieurs types de données avec une syntaxe simple.
+
+</p>
+
+<p>
+
+Au lieu de créer plusieurs variables différentes,
+vous pouvez utiliser une seule classe capable de contenir :
+
+</p>
+
+
+<ul>
+
+<li>Des nombres</li>
+<li>Des caractères</li>
+<li>Des chaînes de caractères</li>
+<li>Des valeurs booléennes</li>
+
+</ul>
+
+
+</div>
+
+
+
+<h2>
+    Fonctionnalités
+</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>
+Support multi-types
+</h3>
+
+<p>
+Supporte les types comme int, float, double, string et plus.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Simple à utiliser
+</h3>
+
+<p>
+Une syntaxe proche des variables classiques du C++.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+C++ Moderne
+</h3>
+
+<p>
+Utilise std::variant, std::visit et les fonctionnalités du C++17.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<h2>
+Exemple rapide
+</h2>
+
+
+<div class="code">
+
+<pre>
+#include &lt;iostream&gt;
+#include "Var.hpp"
+
+int main()
+{
+
+    Var nombre = 42;
+    Var texte = "Bonjour";
+    Var nombreFlottant = 3.14;
+
+    std::cout &lt;&lt; nombre &lt;&lt; std::endl;
+    std::cout &lt;&lt; texte &lt;&lt; std::endl;
+    std::cout &lt;&lt; nombreFlottant &lt;&lt; std::endl;
+
+}
+</pre>
+
+</div>
+
+
+
+<h2>
+Pourquoi utiliser Var ?
+</h2>
+
+
+<div class="card">
+
+<p>
+
+Var simplifie la gestion des données lorsque le type peut changer.
+Elle évite de créer plusieurs systèmes de stockage différents.
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<p>
+Var Documentation - Bibliothèque C++
+</p>
+
+<p>
+Développé par Unnread
+</p>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

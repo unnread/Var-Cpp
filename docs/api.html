@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Var - API Documentation</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<div class="title">
+    Var
+</div>
+
+
+<ul>
+
+<li>
+<a href="index.html">Accueil</a>
+</li>
+
+<li>
+<a href="guide.html">Guide</a>
+</li>
+
+<li>
+<a class="active" href="api.html">API</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+
+<main>
+
+
+<section class="container">
+
+
+<h1>
+Documentation API - Classe Var
+</h1>
+
+
+
+<div class="card">
+
+<p>
+La classe <strong>Var</strong> permet de stocker différents types
+de données dans un seul objet grâce à <code>std::variant</code>.
+</p>
+
+</div>
+
+
+
+
+<h2>
+Déclaration
+</h2>
+
+
+<div class="code">
+
+<pre>
+class Var
+{
+
+private:
+
+    using Value = std::variant&lt;
+        bool,
+        int,
+        float,
+        double,
+        std::string
+    &gt;;
+
+};
+</pre>
+
+</div>
+
+
+
+
+
+<h2>
+Constructeurs
+</h2>
+
+
+<div class="card">
+
+
+<h3>
+Valeurs booléennes
+</h3>
+
+
+<div class="code">
+
+<pre>
+Var(bool valeur);
+</pre>
+
+</div>
+
+
+
+<h3>
+Nombres entiers
+</h3>
+
+
+<div class="code">
+
+<pre>
+Var(short valeur);
+
+Var(int valeur);
+
+Var(long valeur);
+
+Var(long long valeur);
+</pre>
+
+</div>
+
+
+
+
+<h3>
+Nombres décimaux
+</h3>
+
+
+<div class="code">
+
+<pre>
+Var(float valeur);
+
+Var(double valeur);
+
+Var(long double valeur);
+</pre>
+
+</div>
+
+
+
+
+<h3>
+Chaînes de caractères
+</h3>
+
+
+<div class="code">
+
+<pre>
+Var(std::string valeur);
+
+Var(const char* valeur);
+</pre>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<h2>
+Types supportés
+</h2>
+
+
+<table>
+
+
+<tr>
+
+<th>
+Type
+</th>
+
+<th>
+Description
+</th>
+
+</tr>
+
+
+<tr>
+<td>bool</td>
+<td>Valeur vraie ou fausse</td>
+</tr>
+
+
+<tr>
+<td>char</td>
+<td>Caractère simple</td>
+</tr>
+
+
+<tr>
+<td>wchar_t</td>
+<td>Caractère large</td>
+</tr>
+
+
+<tr>
+<td>short</td>
+<td>Petit entier</td>
+</tr>
+
+
+<tr>
+<td>int</td>
+<td>Entier classique</td>
+</tr>
+
+
+<tr>
+<td>long long</td>
+<td>Grand entier</td>
+</tr>
+
+
+<tr>
+<td>float</td>
+<td>Nombre décimal</td>
+</tr>
+
+
+<tr>
+<td>double</td>
+<td>Nombre décimal précis</td>
+</tr>
+
+
+<tr>
+<td>std::string</td>
+<td>Texte</td>
+</tr>
+
+
+<tr>
+<td>std::wstring</td>
+<td>Texte large</td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+<h2>
+Afficher une variable
+</h2>
+
+
+
+<div class="card">
+
+<p>
+La classe surcharge l'opérateur <code>&lt;&lt;</code>
+pour utiliser directement <code>std::cout</code>.
+</p>
+
+
+<div class="code">
+
+<pre>
+Var message = "Bonjour";
+
+std::cout &lt;&lt; message;
+</pre>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<h2>
+Fonctionnement interne
+</h2>
+
+
+<div class="card">
+
+
+<p>
+
+Var utilise plusieurs fonctionnalités modernes du C++ :
+
+</p>
+
+
+<ul>
+
+<li>
+<strong>std::variant</strong> : stockage de plusieurs types.
+</li>
+
+
+<li>
+<strong>std::visit</strong> : récupération automatique de la valeur.
+</li>
+
+
+<li>
+<strong>if constexpr</strong> : traitement selon le type.
+</li>
+
+
+<li>
+<strong>std::decay_t</strong> : détection du type réel.
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+<h2>
+Exemple complet
+</h2>
+
+
+<div class="code">
+
+<pre>
+
+#include &lt;iostream&gt;
+#include "Var.hpp"
+
+
+int main()
+{
+
+    Var nombre = 123;
+
+    Var prix = 9.99;
+
+    Var texte = "Produit";
+
+
+    std::cout &lt;&lt; nombre &lt;&lt; std::endl;
+
+    std::cout &lt;&lt; prix &lt;&lt; std::endl;
+
+    std::cout &lt;&lt; texte &lt;&lt; std::endl;
+
+
+    return 0;
+
+}
+
+</pre>
+
+</div>
+
+
+
+
+
+
+
+<h2>
+Compatibilité
+</h2>
+
+
+<div class="card">
+
+
+<ul>
+
+<li>✅ GCC</li>
+
+<li>✅ Clang</li>
+
+<li>✅ MSVC</li>
+
+<li>✅ C++17 et supérieur</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div class="navigation">
+
+
+<a href="guide.html" class="button">
+← Guide
+</a>
+
+
+<a href="index.html" class="button">
+Accueil
+</a>
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+</main>
+
+
+
+
+<footer>
+
+<p>
+Var Documentation - API Reference
+</p>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
