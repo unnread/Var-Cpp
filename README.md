@@ -122,3 +122,9 @@ Lorsqu'un objet `Var` est affiché avec `std::cout`, la bibliothèque détecte a
 - MSVC
 
 ---
+
+## Comment faire ?
+
+regarder la documentation disponible dans ce repo 
+
+---
